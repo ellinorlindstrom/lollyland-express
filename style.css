@@ -1,0 +1,424 @@
+@font-face {
+  src: url(font/Honey\ Candy.ttf);
+  font-family: candyfont;
+}
+@font-face {
+  src: url(font/nunito-sans/NunitoSans-Regular.ttf);
+  font-family: nunito;
+}
+@font-face {
+  src: url(font/nunito-sans/NunitoSans-Bold.ttf);
+  font-family: nunitobold;
+}
+
+body {
+  background-color: #fefefe;
+  box-sizing: border-box;
+}
+.thumbnail {
+  position: relative;
+  border-radius: 24px;
+  margin-top: 10px;
+}
+header {
+  height: 4.375rem;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+}
+
+.header-logo {
+  height: 70px;
+  cursor: pointer;
+}
+.cartlogo {
+  height: 35px;
+}
+.quantity {
+  margin-right: 15px;
+}
+#toggle-button {
+  background-color: #96bbff;
+  border-radius: 15px;
+  border: none;
+  margin-top: 12px;
+  font-family: nunitobold;
+  padding: 5px 10px;
+}
+
+.hero {
+  margin-top: 0.9rem;
+  height: 10rem;
+  width: 100%;
+  background-image: url(./lollyland-img/Lolly-land-express-header-transparens.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#card {
+  position: fixed;
+  top: 0;
+  left: calc(100% - 400px);
+  width: 400px;
+  background-color: #fefefe;
+  height: 96vh;
+  border: 1px solid #3d3124;
+  border-radius: 5px;
+}
+#card h2 {
+  color: #3d3124;
+  font-family: nunitobold;
+  margin-top: 20px;
+  padding: 0 20px;
+  height: 80px;
+  text-align: center;
+}
+
+.cartListItem {
+  color: #3d3124;
+  list-style: none;
+  font-family: nunitobold;
+}
+
+#card .checkout {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#card .checkout div {
+  background-color: rgb(171, 32, 32);
+  color: azure;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: nunitobold;
+  cursor: pointer;
+}
+
+#card .checkout div:nth-child(2) {
+  background-color: darkgreen;
+  color: azure;
+}
+.hidden {
+  display: none;
+}
+
+.inputCandyAmountClass {
+  width: 3.5rem;
+  height: 2rem;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.addToCartBtnClass {
+  color: white;
+  letter-spacing: 1.2px;
+  background-color: #fdae40;
+  text-align: center;
+  margin-left: 1rem;
+  padding: 0.5rem 6rem;
+  font-size: 1.2rem;
+  font-family: nunitobold;
+  border-radius: 12px;
+  border: none;
+}
+
+.removeButton {
+  background-color: #dcdcdc00;
+  color: #af0000;
+  border: none;
+  border-radius: 15px;
+  padding: 1px 8px;
+  cursor: pointer;
+}
+
+.productImage {
+  margin-bottom: 5px;
+  margin-right: 5px;
+  width: 50px;
+}
+
+.addToCartBtnClass:hover:not(.out-of-stock-btn) {
+  background-color: #ff9808;
+}
+
+.totalPriceCheckout {
+  font-family: nunitobold;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+#totalPrice {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+#totalPrice {
+  text-align: center;
+  font-weight: bold;
+}
+
+/*Mobile*/
+
+.hero {
+  margin-top: 15px;
+  height: 10rem;
+  width: 100%;
+  background-image: url(./lollyland-img/Lolly-land-express-header-transparens.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.products h1 {
+  text-align: center;
+  font-family: candyfont;
+  font: italic;
+  font-size: 2rem;
+  color: #5a4835;
+}
+
+.checkout-el {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 5rem 0rem 10rem 0rem;
+  border: 2px solid #708ad7;
+  border-radius: 10px;
+}
+
+.hero-checkout h2 {
+  font-size: 50px;
+  font-family: nunitobold;
+  color: #574531;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #5a4835;
+  padding: 0px;
+  background-color: #ffff;
+}
+
+.image-container {
+  display: inline-block;
+  margin: 10px;
+  background-color: #fbf5f2;
+  padding: 2rem;
+  border-radius: 24px;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.product-name {
+  margin-top: 12px;
+  font-family: nunitobold;
+  font-size: 1rem;
+  color: #5a4835;
+}
+
+.product-price {
+  position: absolute;
+  font-family: nunitobold;
+  font-size: 1rem;
+  right: 14px;
+  top: 10px;
+  height: 60px;
+  width: 60px;
+  background: #26c033;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+}
+
+.more-info {
+  margin-top: 1rem;
+  font-family: nunitobold;
+  position: absolute;
+  bottom: 120px;
+  right: 50px;
+  background: white;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  color: black;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.popup-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 90%;
+  width: 100%;
+  border-radius: 24px;
+}
+
+.popup-close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  color: #333;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+.popup {
+  max-width: 75%;
+}
+
+.popup-text {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.product-count-container {
+  font-style: italic;
+  font-family: nunito;
+}
+
+#products-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.out-of-stock-btn {
+  background-color: rgb(204, 204, 204);
+}
+
+.in-stock {
+  background-color: #90bcff;
+}
+
+.out-of-stock {
+  background-color: #ff0000;
+}
+
+.stock-status {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: nunitobold;
+}
+.candy-count-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: nunito;
+  font-style: italic;
+}
+
+.cartImg {
+  max-width: 50px;
+  max-height: 100%;
+  margin: 12px;
+}
+
+
+/* Tablet */
+
+@media screen and (min-width: 400px) {
+  .hero {
+    height: 12rem;
+    background-size: contain;
+  }
+
+  .checkout-el {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .popup-text {
+    font-size: 14px;
+  }
+  .popup {
+    height: 50vh;
+    margin-right: 20px;
+    max-width: 100%;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 961px) {
+  .hero {
+    height: 18rem;
+  }
+
+  .checkout-el {
+    width: 40rem;
+  }
+
+  .popup-text {
+    width: 50rem;
+  }
+  .popup-text {
+    font-size: 16px;
+  }
+
+  .popup-wrapper {
+    max-width: 80%;
+    width: auto;
+  }
+}

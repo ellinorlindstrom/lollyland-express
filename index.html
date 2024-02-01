@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lolly-Land Express</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container-fluid">
+    <header>
+      <div class="firstheaderlogo">
+        <img
+          class="header-logo"
+          src="lollyland-img/Lolly-land-express-candy-transparens.png"
+          alt="logo-img"
+        />
+      </div>
+
+      <div class="shopping">
+        <button id="toggle-button">
+          <img
+            class="cartlogo"
+            src="lollyland-img/cart-icon-28360.png"
+            alt="carticon"
+          />
+          <span id="quantity">0</span>
+        </button>
+
+        <div id="card" class="hidden">
+          <h2>Shoppingcart</h2>
+          <ul id="listCart"></ul>
+          <div id="totalPrice">Total: 0 kr</div>
+          <div class="checkout">
+            <div id="closebtn" class="closeShopping">Close</div>
+            <div id="pay">Checkout</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero"></div>
+    <section>
+      <div class="products">
+        <h1>
+          With Every Bite, a Smile so Wide, <br />
+          Lollyland Express, your candy guide!
+        </h1>
+        <div class="candy-count-container"></div>
+        <div id="products-list"></div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <p>© 2023 Lollyland Express</p>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
